@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.JiankangxinxiDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.JiankangxinxiEntity" id="jiankangxinxiMap">
+        <result property="laorenxingming" column="laorenxingming"/>
+        <result property="xingbie" column="xingbie"/>
+        <result property="nianling" column="nianling"/>
+        <result property="huanbingshi" column="huanbingshi"/>
+        <result property="shengao" column="shengao"/>
+        <result property="tizhong" column="tizhong"/>
+        <result property="xinlv" column="xinlv"/>
+        <result property="xueya" column="xueya"/>
+        <result property="shentizhibiao" column="shentizhibiao"/>
+        <result property="jiankangfenxi" column="jiankangfenxi"/>
+        <result property="faburiqi" column="faburiqi"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.JiankangxinxiVO" >
+		SELECT * FROM jiankangxinxi  jiankangxinxi         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.JiankangxinxiVO" >
+		SELECT  jiankangxinxi.* FROM jiankangxinxi  jiankangxinxi 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.JiankangxinxiView" >
+
+		SELECT  jiankangxinxi.* FROM jiankangxinxi  jiankangxinxi 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.JiankangxinxiView" >
+		SELECT * FROM jiankangxinxi  jiankangxinxi <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

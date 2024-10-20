@@ -50,7 +50,7 @@
 四、运行截图
 ---
 ### 论文截图：
-![limage/12.png](limage/1.png)
+![limage/12.png](limage/3.png)
 ![limage/3.png](limage/2.png)
 
 ### 程序截图：
